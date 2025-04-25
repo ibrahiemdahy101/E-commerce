@@ -1,0 +1,8 @@
+.selwrap{
+    display: flex;
+    margin-left: 117px;
+
+}
+.form-select{
+    flex-basis: content;
+}

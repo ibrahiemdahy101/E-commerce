@@ -1,0 +1,45 @@
+<div class="container">
+    <div style="display: flex; justify-content: end;">
+        <button>
+        <span class="card-header text-danger">clear cart</span>
+        </button>
+    </div>
+<table class="table table-striped ">
+    <thead>
+        <tr>
+            <th>image</th>
+            <th>title</th>
+            <th>price</th>
+            <th style="width: 25%;">Quantity</th>
+            <th>total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="object-fit: cover" *ngFor="let product of cartProduct,let index=index">
+            <td><img style="width: 20%;" src="{{product.item.image}}" alt=""></td>
+            <td>{{product.item.title}}</td>
+            <td>{{product.item.price}}</td>
+            <td>
+                <div class="quantity">
+                    <button class="btn btn-dark" (click)="addAmount(index)">+</button>
+                    <input type="text" id="" [(ngModel)]="product.quantity">
+                    <button class="btn btn-dark" (click)="minAmount(index)">-</button>
+                </div>
+            </td>
+            <td>{{product.item.price * product.quantity}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delet(index)">delet</button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>total:{{total}}</th>
+            <th> <button class="btn btn-success">order</button></th>
+        </tr>
+    </tfoot>
+</table>
+</div>

@@ -1,0 +1,9 @@
+<div class="container" style="margin: 100px; display: flex; justify-content: space-around;">
+    <img src="{{product.image}}" style="width: 300px; margin-bottom: 20px;" alt="">
+<form action="" method="PUT" (ngSubmit)="update()" style="display: flex; flex-direction: column; ">
+   price<input type="text" style="margin-top: 10px; margin-bottom: 10px;" [(ngModel)]="product.price" name="price">
+    name<input type="text" style="margin-top: 10px; margin-bottom: 7px;" [(ngModel)]="product.title" name="title">
+    description<textarea name="description" style="margin-top: 10px; margin-bottom: 10px;" id="" cols="30" rows="10" [(ngModel)]="product.description" ></textarea>
+    <button class="btn btn-dark px-4" style="margin-top: 20px;" >Save</button>
+</form>
+</div>

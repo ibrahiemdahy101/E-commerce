@@ -1,0 +1,14 @@
+<button class="mx-5 btn btn-dark" style="margin-top: 60px; margin-bottom: 60px;">Add Product</button>
+<div>
+<div *ngFor="let pro of products,let index=index" class="mx-3" style="display: flex; align-items: center; width: 300px;">
+    <img src="{{pro.image}}" style="width: 200px;" class="m-4" alt="">
+    <div>
+        <p class="">{{pro.title}}</p>
+        <p>{{pro.price}}</p>
+        <div style="display:flex;">
+            <button class="btn btn-danger px-5" (click)="deletP(index)">delet</button>
+            <button routerLink="/admin/product/edit/{{pro.id}}" class="btn btn-success mx-2 px-5">edit</button>
+        </div>
+    </div>
+    </div>
+</div>

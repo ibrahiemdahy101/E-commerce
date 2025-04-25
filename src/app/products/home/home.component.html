@@ -1,0 +1,9 @@
+<div class="wrap">
+<app-select [categories]="categories" (selected)="getCateg($event)"></app-select>
+<div class="cardWrap container">
+    <div *ngFor="let product of products">
+    <app-product #hh [prod]="product" (itempro)="addTo($event)"></app-product>
+    </div>
+</div>
+</div>
+

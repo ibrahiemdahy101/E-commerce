@@ -1,0 +1,6 @@
+<div class="container selwrap">
+    <select class="form-select" (change)="change($event)">
+        <OPTion value="All">All</OPTion>
+        <option value={{product}} *ngFor="let product of categories">{{product}}</option> 
+     </select>
+</div>
